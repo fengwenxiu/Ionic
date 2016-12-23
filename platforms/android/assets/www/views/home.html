@@ -1,0 +1,18 @@
+<ion-view view-title="{{news[0].channelName}}" hide-back-button="true">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-small ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content style="margin-top:43px;">
+        <ion-list >
+            <a class="item item-thumbnail-left" ng-repeat="(key,value) in news" href="#/datails/{{key}}">
+                <img src="{{value.imageurls.length?value.imageurls[0].url :'http://img3.gao7.com/files/appleimage/CDD/CDD8A976-54F8-4DEA-913B-D53DDBB4C473.jpg'}}">
+                <h2>{{value.title}}</h2>
+                <p>{{value.desc}}</p>
+                <p>时间：{{value.pubDate}}</p>
+                <p>来源：{{value.source}}</p>
+            </a>
+        </ion-list>
+        <ion-infinite-scroll ng-if="hasMore" on-infinite="loadMore(5)" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

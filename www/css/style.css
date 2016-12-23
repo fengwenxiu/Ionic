@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+ *[ng-cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
+img{
+    max-width: 100%;
+}
+p>img{
+    display: block;
+    margin: 0 auto;
+}
+#view-slide .slider{
+	height: 100%;
+	background-color: #387EF5;
+	color: white;
+}
+
+#view-slide .slider-slide{
+	padding: 15vh 10vw 0 10vw;
+	text-align: center;
+}
+
+#view-slide .slider-slide .icon{
+	font-size: 50vw;
+}
+
+#view-slide .slider-slide h4{
+	color: white;
+}
+
+#view-slide .slider-slide p{
+	text-align: justify;
+}
+
+#view-slide .slider-pager-page{
+	color: white;
+}
+
+#view-slide .slider .button-begin{
+	margin-top: 5em;	
+}

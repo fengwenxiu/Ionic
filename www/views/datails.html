@@ -1,0 +1,7 @@
+<ion-view view-title="新闻详情">
+    <ion-content class="padding" style="margin-top:4px;">
+        <h2 style="font-size:20px;text-align:center">{{new.title}}</h2>
+        <p style="color:#666">时间：{{new.pubDate}}<span style="padding:20px;"></span> 来源：{{new.source}}</p>
+        <div ng-bind-html="new.html | htmlContent" style="padding-bottom:30px;"></div>
+    </ion-content>
+</ion-view>
