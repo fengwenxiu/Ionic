@@ -13,18 +13,17 @@ app.run(function ($ionicPlatform) {
 })
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/slide');
-    $stateProvider
-    .state('slide', {
+    $stateProvider.state('slide', {
       url: '/slide',
       templateUrl: 'views/slide.html'
     })
       .state('home', {
         url: '/home',
-        templateUrl: '/views/home.html'
+        templateUrl: 'views/home.html'
       })
       .state('details', {
         url: '/datails/:id',
-        templateUrl: '/views/datails.html',
+        templateUrl: 'views/datails.html',
         controller: "DetailController"
       })
   })
