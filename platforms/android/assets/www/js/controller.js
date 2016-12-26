@@ -9,12 +9,13 @@ app.controller('AppController', function ($rootScope, $scope, $http, $ionicNavBa
     $scope.newsList = [];
     function Http() {
         $http({
-            url: 'http://apis.baidu.com/showapi_open_bus/channel_news/search_news',
+            // url: 'http://apis.baidu.com/showapi_open_bus/channel_news/search_news',
+            url: 'http://route.showapi.com/109-35?showapi_appid=29543&showapi_sign=c8fe7215856144a690dcf45bc6261914',
             method: 'GET',
             params: $scope.params,
-            headers: {
-                'apikey': 'a79124c4594c2e5a0799a39ea8f64c87'
-            }
+            // headers: {
+            //     'apikey': 'a79124c4594c2e5a0799a39ea8f64c87'
+            // }
         })
             .success(function (data, status, hearders, config) {
                 if (data.showapi_res_error) {
@@ -33,11 +34,12 @@ app.controller('AppController', function ($rootScope, $scope, $http, $ionicNavBa
     }
     Http();
     $http({
-        url: 'http://apis.baidu.com/showapi_open_bus/channel_news/channel_news',
+        // url: 'http://apis.baidu.com/showapi_open_bus/channel_news/channel_news',
+        url: 'http://route.showapi.com/109-34?showapi_appid=29543&showapi_sign=c8fe7215856144a690dcf45bc6261914',
         method: 'GET',
-        headers: {
-            'apikey': 'a79124c4594c2e5a0799a39ea8f64c87'
-        }
+        // headers: {
+        //     'apikey': 'a79124c4594c2e5a0799a39ea8f64c87'
+        // }
     })
         .success(function (data, status, hearders, config) {
             $scope.newsList = data.showapi_res_body.channelList;
@@ -58,12 +60,13 @@ app.controller('AppController', function ($rootScope, $scope, $http, $ionicNavBa
         }           
         
         $http({
-            url: 'http://apis.baidu.com/showapi_open_bus/channel_news/search_news',
+            // url: 'http://apis.baidu.com/showapi_open_bus/channel_news/search_news',
+            url: 'http://route.showapi.com/109-35?showapi_appid=29543&showapi_sign=c8fe7215856144a690dcf45bc6261914',
             method: 'GET',
             params: $scope.params,
-            headers: {
-                'apikey': 'a79124c4594c2e5a0799a39ea8f64c87'
-            }
+            // headers: {
+            //     'apikey': 'a79124c4594c2e5a0799a39ea8f64c87'
+            // }
         })
             .success(function (data, status, hearders, config) {
                 if (data.showapi_res_error) {
